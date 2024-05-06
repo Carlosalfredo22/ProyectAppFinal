@@ -1,0 +1,37 @@
+<app-header title="Inicio"></app-header>
+
+<ion-content>
+  <!-- Mostrar los datos guardados -->
+  <ion-card>
+    <ion-card-header>
+      Datos Guardados
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <!-- Iterar sobre los usuarios y mostrar sus datos -->
+        <ion-item *ngFor="let usuario of usuarios">
+          <ion-label>ID Cliente: {{ usuario.idCliente }}</ion-label>
+          <ion-label>Nombre: {{ usuario.nombre }}</ion-label>
+          <ion-label>Código de Ingreso: {{ usuario.codigoIngreso }}</ion-label>
+          <ion-label>Color del Automóvil: {{ usuario.colorAutomovil }}</ion-label>
+          <ion-label>Número de Placa: {{ usuario.numeroPlaca }}</ion-label>
+          <ion-label>Hora de Entrada: {{ usuario.horaEntrada }}</ion-label>
+          <ion-label>Hora de Salida: {{ usuario.horaSalida }}</ion-label>
+          <!-- Botón para eliminar el usuario -->
+          <ion-button color="danger" (click)="eliminarUsuario(usuario)">Eliminar</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón para generar reporte PDF -->
+  <ion-button expand="block" (click)="generarReportePDF()">Generar Reporte PDF</ion-button>
+
+  <!-- Nuevo usuario parqueo -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning" (click)="addUpdateparqueoUsuario()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

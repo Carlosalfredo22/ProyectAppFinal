@@ -1,0 +1,7 @@
+{
+  "name": "AppIonicparcl3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

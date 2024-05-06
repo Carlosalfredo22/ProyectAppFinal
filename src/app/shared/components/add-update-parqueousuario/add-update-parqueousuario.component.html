@@ -1,0 +1,45 @@
+<app-header [isModal]="true" title="Agregar usuario nuevo"></app-header>
+
+<ion-content>
+
+    <form (ngSubmit)="guardarDatos()">
+      <!-- Campo ID Cliente -->
+      <ion-item>
+        <ion-label position="floating">ID Cliente</ion-label>
+        <ion-input type="number" [(ngModel)]="idCliente" name="idCliente" required></ion-input>
+      </ion-item>
+      <!-- Campo Nombre -->
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+      </ion-item>
+      <!-- Campo Código de Ingreso -->
+      <ion-item>
+        <ion-label position="floating">Código de Ingreso</ion-label>
+        <ion-input type="text" [(ngModel)]="codigoIngreso" name="codigoIngreso" required></ion-input>
+      </ion-item>
+      <!-- Campo Color del Automóvil -->
+      <ion-item>
+        <ion-label position="floating">Color del Automóvil</ion-label>
+        <ion-input type="text" [(ngModel)]="colorAutomovil" name="colorAutomovil" required></ion-input>
+      </ion-item>
+      <!-- Campo Número de Placa -->
+      <ion-item>
+        <ion-label position="floating">Número de Placa</ion-label>
+        <ion-input type="number" [(ngModel)]="numeroPlaca" name="numeroPlaca" required></ion-input>
+      </ion-item>
+      <!-- Campo Hora de Entrada -->
+      <ion-item>
+        <ion-label position="floating">Hora de Entrada</ion-label>
+        <ion-input type="time" [(ngModel)]="horaEntrada" name="horaEntrada" required></ion-input>
+      </ion-item>
+      <!-- Campo Hora de Salida -->
+      <ion-item>
+        <ion-label position="floating">Hora de Salida</ion-label>
+        <ion-input type="time" [(ngModel)]="horaSalida" name="horaSalida" required></ion-input>
+      </ion-item>
+      <!-- Botón para enviar el formulario -->
+      <ion-button expand="block" type="submit">Enviar</ion-button>
+    </form>
+
+</ion-content>
